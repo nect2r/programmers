@@ -1,0 +1,22 @@
+package level_0;
+
+public class P120834 {
+    class Solution {
+    public int[] solution(int[] emergency) {
+        int[] answer = new int[emergency.length];
+        
+        for(int i=0; i<emergency.length; i++) {
+            int rank = 1;
+            for(int j=0; j<emergency.length; j++) {
+                if(emergency[i] < emergency[j]) {
+                    rank++;
+                }
+            }
+            answer[i] = rank;
+        }
+        
+        
+        return answer;
+    }
+}
+}
